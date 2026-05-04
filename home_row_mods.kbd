@@ -1,0 +1,20 @@
+;; This config sets up mod-tap modifier keys in the home row of the keyboard
+
+(defcfg
+	process-unmapped-keys yes
+)
+
+(defsrc
+	a s d f j k l ;
+)
+
+(deflayer default
+)
+
+(defalias
+	a-mod (tap-hold 200 200 a lalt)
+)
+
+(deflayer base
+ 	@a-mod 
+)

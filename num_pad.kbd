@@ -4,7 +4,7 @@
 	process-unmapped-keys yes
 )
 
-(defcfg
+(defsrc
 	caps	u	i	o
 		j	k	l
 		m	,	.
