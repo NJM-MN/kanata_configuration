@@ -8,13 +8,18 @@
 	a s d f j k l ;
 )
 
-(deflayer default
-)
-
 (defalias
 	a-mod (tap-hold 200 200 a lalt)
+	s-mod (tap-hold 200 200 s lmet)
+	d-mod (tap-hold 200 200 d lsft)
+	f-mod (tap-hold 200 200 f lctl)
+
+	j-mod (tap-hold 200 200 j rctl)
+	k-mod (tap-hold 200 200 k rsft)
+	l-mod (tap-hold 200 200 l rmet)
+	;-mod (tap-hold 200 200 ; ralt)
 )
 
 (deflayer base
- 	@a-mod 
+ 	@a-mod @s-mod @d-mod @f-mod	@j-mod @k-mod @l-mod @;-mod
 )
