@@ -5,21 +5,38 @@
 )
 
 (defsrc
-	a s d f j k l ;
+	caps	a s d f j k l ;
+)
+
+(defvar
+	tap-to 200 	;; 'to' abreviation for 'timeout'
+	hold-to 200
 )
 
 (defalias
-	a-mod (tap-hold 200 200 a lalt)
-	s-mod (tap-hold 200 200 s lmet)
-	d-mod (tap-hold 200 200 d lsft)
-	f-mod (tap-hold 200 200 f lctl)
+	caps-mod (tap-hold $tap-to $hold-to esc caps)
 
-	j-mod (tap-hold 200 200 j rctl)
-	k-mod (tap-hold 200 200 k rsft)
-	l-mod (tap-hold 200 200 l rmet)
-	;-mod (tap-hold 200 200 ; ralt)
+	a-mod (tap-hold $tap-to $hold-to a lalt)
+	s-mod (tap-hold $tap-to $hold-to s lmet)
+	d-mod (tap-hold $tap-to $hold-to d lsft)
+	f-mod (tap-hold $tap-to $hold-to f lctl)
+
+	j-mod (tap-hold $tap-to $hold-to j rctl)
+	k-mod (tap-hold $tap-to $hold-to k rsft)
+	l-mod (tap-hold $tap-to $hold-to l rmet)
+	;-mod (tap-hold $tap-to $hold-to ; ralt)
 )
 
 (deflayer base
- 	@a-mod @s-mod @d-mod @f-mod	@j-mod @k-mod @l-mod @;-mod
+ 	@caps-mod
+
+	@a-mod
+	@s-mod
+	@d-mod
+	@f-mod
+
+	@j-mod
+	@k-mod
+	@l-mod
+	@;-mod
 )
