@@ -24,8 +24,9 @@
 |#
 
 (defvar
-	tap-to 200 	;; 'to' abreviation for 'timeout'
-	hold-to 150
+	tap-to 200 	;; tap-timeout
+	hold-to 150	;; hold-timeout
+	l-hold-to 200	;; long-tap-timeout
 )
 
 (defalias
@@ -34,8 +35,8 @@
 	num (layer-while-held number)
 
 ;; home-row mods
-	e-mod (tap-hold $tap-to $hold-to e @num)
-	r-mod (tap-hold $tap-to $hold-to r @nav)
+	e-mod (tap-hold $tap-to $l-hold-to e @num)
+	r-mod (tap-hold $tap-to $l-hold-to r @nav)
 	a-mod (tap-hold $tap-to $hold-to a lalt)
 	s-mod (tap-hold $tap-to $hold-to s lmet)
 	d-mod (tap-hold $tap-to $hold-to d lsft)
